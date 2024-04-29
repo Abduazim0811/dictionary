@@ -1,10 +1,10 @@
-package enguz
+package add
 
 import (
 	"database/sql"
 	"fmt"
 )
 
-func Enguz(db *sql.DB) {
+func Add(db *sql.DB) {
 	fmt.Println()
 }
