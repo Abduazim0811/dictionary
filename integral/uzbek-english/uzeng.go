@@ -14,19 +14,28 @@ func Uzeng(db *sql.DB) {
 		sentence string
 	)
 	mp := md.MP
-	fmt.Println("Barcha lug'atlar:\n")
+	fmt.Println("Barcha lug'atlar:")
 	for key, value := range mp {
 		fmt.Println(value, "-", key)
 	}
+	i := 1
+	for i > 0 {
+		son:=0
+		fmt.Println("Qidiruv: ")
+		fmt.Scanln(&sentence)
 
-	fmt.Println("Qidiruv: ")
-	fmt.Scanln(&sentence)
+		for key, value := range mp {
+			if value == strings.TrimSpace(sentence) {
+				fmt.Println(value, "-", key)
+			}
+		}
 
-	for key, value := range mp {
-		if value == strings.TrimSpace(sentence) {
-			fmt.Println(value, "-", key)
+		fmt.Println("Bunday so'z mavjud emas!!")
+		fmt.Println("yana malumot qidirasizmi?\n[1]HA\t[2]YOQ")
+		fmt.Scanln(&son)
+		if son==2{
+			break
 		}
 	}
 
-	fmt.Println("Bunday so'z mavjud emas!!")
 }
