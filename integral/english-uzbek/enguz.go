@@ -17,7 +17,7 @@ func Enguz(db *sql.DB) {
 	for key, value := range mp {
 		fmt.Println(key, "-", value)
 	}
-	i := 0
+	i := 1
 	for i > 0 {
 		son:=0
 		fmt.Println("Search: ")

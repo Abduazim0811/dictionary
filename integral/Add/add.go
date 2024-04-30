@@ -10,7 +10,7 @@ func Add(db *sql.DB) {
 	var (
 		english, uzbek string
 	)
-	i := 0
+	i := 1
 	for i > 0 {
 		son:=0
 		fmt.Print("english: ")
